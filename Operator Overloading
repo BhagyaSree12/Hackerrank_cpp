@@ -1,0 +1,28 @@
+
+class Matrix
+{
+public:
+    Matrix(){}
+    vector< vector<int> > a;
+    
+    
+};
+Matrix operator+(Matrix& a,Matrix b)
+{
+    Matrix c;
+    c.a.resize(a.a.size());
+    for(int i=0;i<c.a.size();i++)
+    {
+        c.a[i].resize(a.a[i].size());
+    }
+
+    for(int i=0;i<a.a.size();i++)
+    {
+        for(int j=0;j<a.a[i].size();j++)
+        {
+            c.a[i][j]=a.a[i][j]+b.a[i][j];
+        }
+    }
+
+    return c;
+}
